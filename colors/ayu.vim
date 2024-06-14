@@ -146,7 +146,7 @@ exe "hi! String"          .s:fg_string    .s:bg_none        .s:fmt_none
 "   Boolean"
 "   Float"
 
-exe "hi! Identifier"      .s:fg_tag       .s:bg_none        .s:fmt_none
+exe "hi! Identifier"      .s:fg_fg       .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_function  .s:bg_none        .s:fmt_none
 
 exe "hi! Statement"       .s:fg_keyword   .s:bg_none        .s:fmt_none
