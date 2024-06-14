@@ -13,7 +13,7 @@ let g:colors_name = "ayu"
 " ----------------------------------------------------------------------------
 
 let s:palette = {}
-
+" #FFEE99
 let s:palette.bg        = {'dark': "#0F1419",  'light': "#FAFAFA",  'mirage': "#212733"}
 let s:palette.comment   = {'dark': "#5C6773",  'light': "#ABB0B6",  'mirage': "#5C6773"}
 let s:palette.markup    = {'dark': "#F07178",  'light': "#F07178",  'mirage': "#F07178"}
@@ -23,7 +23,7 @@ let s:palette.tag       = {'dark': "#39BAE6",  'light': "#5C6773",  'mirage': "#
 let s:palette.regexp    = {'dark': "#95E6CB",  'light': "#4CBF99",  'mirage': "#95E6CB"}
 let s:palette.string    = {'dark': "#B8CC52",  'light': "#86B300",  'mirage': "#BBE67E"}
 let s:palette.function  = {'dark': "#FFB454",  'light': "#F29718",  'mirage': "#FFD57F"}
-let s:palette.special   = {'dark': "#FFEE99",  'light': "#E6B673",  'mirage': "#FFC44C"}
+let s:palette.special   = {'dark': "#39BAE6",  'light': "#E6B673",  'mirage': "#FFC44C"}
 let s:palette.keyword   = {'dark': "#FF7733",  'light': "#FF7733",  'mirage': "#FFAE57"}
 
 let s:palette.error     = {'dark': "#FF3333",  'light': "#FF3333",  'mirage': "#FF3333"}
@@ -34,6 +34,8 @@ let s:palette.line      = {'dark': "#151A1E",  'light': "#F3F3F3",  'mirage': "#
 let s:palette.selection = {'dark': "#253340",  'light': "#F0EEE4",  'mirage': "#343F4C"}
 let s:palette.fg        = {'dark': "#E6E1CF",  'light': "#5C6773",  'mirage': "#D9D7CE"}
 let s:palette.fg_idle   = {'dark': "#3E4B59",  'light': "#828C99",  'mirage': "#607080"}
+let s:palette.punctuation   = {'dark': "#FFEE99",  'light': "#FFEE99",  'mirage': "#FFEE99"}
+
 
 "}}}
 
@@ -90,7 +92,8 @@ exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLineNr"  .s:fg_accent      .s:bg_line        .s:fmt_none
 exe "hi! LineNr"        .s:fg_guide       .s:bg_none        .s:fmt_none
 exe "hi! Cursor"        .s:fg_bg          .s:bg_function    .s:fmt_none
-exe "hi! iCursor"      .s:fg_bg          .s:bg_function    .s:fmt_none
+exe "hi! iCursor"       .s:fg_function    .s:bg_none        .s:fmt_none
+exe "hi! @punctuation"  .s:fg_punctuation .s:bg_none        .s:fmt_none
 
 exe "hi! Directory"     .s:fg_fg_idle     .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_string      .s:bg_panel       .s:fmt_none
