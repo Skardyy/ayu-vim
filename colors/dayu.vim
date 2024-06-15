@@ -5,8 +5,8 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let s:style = get(g:, 'ayucolor', 'dark')
-let g:colors_name = "ayu"
+let s:style = 'dark'
+let g:colors_name = "dayu"
 "}}}
 
 " Palettes:"{{{
@@ -28,8 +28,8 @@ let s:palette.keyword         = {'dark': "#FF7733"}
 let s:palette.error           = {'dark': "#FF3333"}
 let s:palette.accent          = {'dark': "#F29718"}
 let s:palette.panel           = {'dark': "#14191F"}
-let s:palette.guide           = {'dark': "#2D3640"}
-let s:palette.line            = {'dark': "#262f3e"}
+let s:palette.guide           = {'dark': "None"}
+let s:palette.line            = {'dark': "#212730"}
 let s:palette.selection       = {'dark': "#3d424d"}
 let s:palette.fg              = {'dark': "#E6E1CF"}
 let s:palette.fg_idle         = {'dark': "#39BAE6"}
