@@ -28,8 +28,8 @@ let s:palette.keyword         = {'dark': "#FF7733"}
 let s:palette.error           = {'dark': "#FF3333"}
 let s:palette.accent          = {'dark': "#F29718"}
 let s:palette.panel           = {'dark': "#14191F"}
-let s:palette.guide           = {'dark': "None"}
-let s:palette.line            = {'dark': "#212730"}
+let s:palette.guide           = {'dark': "#2D3640"}
+let s:palette.line            = {'dark': "#252735"}
 let s:palette.selection       = {'dark': "#3d424d"}
 let s:palette.fg              = {'dark': "#E6E1CF"}
 let s:palette.fg_idle         = {'dark': "#39BAE6"}
@@ -88,7 +88,7 @@ exe "hi! ColorColumn"   .s:fg_none        .s:bg_line        .s:fmt_none
 " Conceal, Cursor, CursorIM
 exe "hi! CursorColumn"  .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
-exe "hi! CursorLineNr"  .s:fg_none        .s:bg_none        .s:fmt_none
+exe "hi! CursorLineNr"  .s:fg_accent      .s:bg_none        .s:fmt_none
 exe "hi! LineNr"        .s:fg_guide       .s:bg_none        .s:fmt_none
 exe "hi! @punctuation"  .s:fg_punctuation .s:bg_none        .s:fmt_none
 
@@ -107,8 +107,8 @@ exe "hi! MatchParen"    .s:fg_fg          .s:bg_bg          .s:fmt_undr
 exe "hi! ModeMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! NonText"       .s:fg_guide       .s:bg_none        .s:fmt_none
-exe "hi! Pmenu"         .s:fg_fg          .s:bg_selection   .s:fmt_none
-exe "hi! PmenuSel"      .s:fg_fg          .s:bg_selection   .s:fmt_revr
+exe "hi! Pmenu"         .s:fg_fg          .s:bg_none        .s:fmt_none
+exe "hi! PmenuSel"      .s:fg_fg          .s:bg_none        .s:fmt_revr
 "   PmenuSbar"
 "   PmenuThumb"
 exe "hi! Question"      .s:fg_string      .s:bg_none        .s:fmt_none
