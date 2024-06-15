@@ -31,9 +31,9 @@ let s:palette.panel           = {'normal': "#14191F"}
 let s:palette.guide           = {'normal': "#2D3640"}
 let s:palette.line            = {'normal': "#25282e"}
 let s:palette.selection       = {'normal': "#3d424d"}
-let s:palette.fg              = {'normal': "#E6E1CF"}
+let s:palette.fg              = {'normal': "#f8f8f0", 'soft_text': '#E6E1CF'}
 let s:palette.fg_idle         = {'normal': "#39BAE6"}
-let s:palette.punctuation     = {'normal': "#FFEE99", 'soft': "#E6E1CF"}
+let s:palette.punctuation     = {'normal': "#FFEE99", 'soft': "#f8f8f0", 'soft_text': '#E6E1CF'}
 
 
 "}}}
@@ -97,6 +97,7 @@ exe "hi! CursorLineNr"  .s:fg_accent      .s:bg_none        .s:fmt_none
 exe "hi! LineNr"        .s:fg_guide       .s:bg_none        .s:fmt_none
 exe "hi! @punctuation"  .s:fg_punctuation .s:bg_none        .s:fmt_none
 exe "hi! @tag.delimiter" .s:fg_punctuation .s:bg_none        .s:fmt_none
+exe "hi! @tag.attribute" .s:fg_function   .s:bg_none        .s:fmt_none
 
 exe "hi! Directory"     .s:fg_fg_idle     .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_string      .s:bg_panel       .s:fmt_none
