@@ -96,7 +96,7 @@ exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLineNr"  .s:fg_accent      .s:bg_none        .s:fmt_none
 exe "hi! LineNr"        .s:fg_guide       .s:bg_none        .s:fmt_none
 exe "hi! @punctuation"  .s:fg_punctuation .s:bg_none        .s:fmt_none
-exe "hi! @tag.delimiter" .s:fg_punctuation .s:bg_none        .s:fmt_none
+exe "hi! @tag.delimiter" .s:fg_fg         .s:bg_none        .s:fmt_none
 
 exe "hi! Directory"     .s:fg_fg_idle     .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_string      .s:bg_panel       .s:fmt_none
@@ -109,7 +109,7 @@ exe "hi! FoldColumn"    .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_none        .s:fmt_none
 "   Incsearch"
 
-exe "hi! MatchParen"    .s:fg_accent      .s:bg_line        .s:fmt_undr
+exe "hi! MatchParen"    .s:fg_accent      .s:bg_selection   .s:fmt_undr
 exe "hi! ModeMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! NonText"       .s:fg_guide       .s:bg_none        .s:fmt_none
@@ -154,7 +154,7 @@ exe "hi! String"          .s:fg_string    .s:bg_none        .s:fmt_none
 "   Float"
 
 exe "hi! Identifier"      .s:fg_fg       .s:bg_none        .s:fmt_none
-exe "hi! Function"        .s:fg_function  .s:bg_none        .s:fmt_none
+exe "hi! Function"        .s:fg_function .s:bg_none        .s:fmt_none
 
 exe "hi! Statement"       .s:fg_keyword   .s:bg_none        .s:fmt_none
 "   Conditional"
@@ -202,6 +202,7 @@ exe "hi! CursorLineConceal" .s:fg_guide   .s:bg_line        .s:fmt_none
 
 " Terminal
 " ---------
+let s:style = 'normal'
 if has("nvim")
   let g:terminal_color_0 =  s:palette.bg[s:style]
   let g:terminal_color_1 =  s:palette.markup[s:style]
