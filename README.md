@@ -9,6 +9,19 @@
 ### GO  
 ![image](https://github.com/Skardyy/ayu-vim/assets/81825126/85c5665a-853a-4726-bc1b-7dd0c06bc145)  
 
+
+### Soft Var  
+```lua
+-- Nvim
+vim.g.ayucolor = "soft"
+-- Vim
+let ayucolor="soft"
+-- To have the following softer version of theme
+-- There is also soft_text which also makes the text less bright
+```
+![image](https://github.com/Skardyy/dayu-vim/assets/81825126/d813d09d-6319-436b-a064-fe0cbbf554c2)
+
+
   
 > \[!Important]
 >   
