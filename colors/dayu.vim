@@ -29,7 +29,7 @@ let s:palette.error           = {'dark': "#FF3333"}
 let s:palette.accent          = {'dark': "#F29718"}
 let s:palette.panel           = {'dark': "#14191F"}
 let s:palette.guide           = {'dark': "#2D3640"}
-let s:palette.line            = {'dark': "#252735"}
+let s:palette.line            = {'dark': "#25282e"}
 let s:palette.selection       = {'dark': "#3d424d"}
 let s:palette.fg              = {'dark': "#E6E1CF"}
 let s:palette.fg_idle         = {'dark': "#39BAE6"}
@@ -103,7 +103,7 @@ exe "hi! FoldColumn"    .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_none        .s:fmt_none
 "   Incsearch"
 
-exe "hi! MatchParen"    .s:fg_fg          .s:bg_bg          .s:fmt_undr
+exe "hi! MatchParen"    .s:fg_accent      .s:bg_none        .s:fmt_undr
 exe "hi! ModeMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! NonText"       .s:fg_guide       .s:bg_none        .s:fmt_none
