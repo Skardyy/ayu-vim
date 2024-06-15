@@ -21,7 +21,7 @@ let s:palette.operator        = {'normal': "#FF7733"}
 let s:palette.tag             = {'normal': "#39BAE6"}
 let s:palette.regexp          = {'normal': "#95E6CB"}
 let s:palette.string          = {'normal': "#95FB79"}
-let s:palette.function        = {'normal': "#FCED65", 'soft': "#FFEE99"}
+let s:palette.function        = {'normal': "#FCED65", 'soft': "#FFEE99", 'soft_text': "#FFEE99"}
 let s:palette.special         = {'normal': "#39BAE6"}
 let s:palette.keyword         = {'normal': "#FF7733"}
 
