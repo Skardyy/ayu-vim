@@ -5,7 +5,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let s:style = 'normal'
+let s:style = get(g:, 'ayucolor', 'normal')
 let g:colors_name = "dayu"
 "}}}
 
@@ -21,7 +21,7 @@ let s:palette.operator        = {'normal': "#FF7733"}
 let s:palette.tag             = {'normal': "#39BAE6"}
 let s:palette.regexp          = {'normal': "#95E6CB"}
 let s:palette.string          = {'normal': "#95FB79"}
-let s:palette.function        = {'normal': "#FCED65", 'soft': '#FFEE99'}
+let s:palette.function        = {'normal': "#FCED65", 'soft': "#FFEE99"}
 let s:palette.special         = {'normal': "#39BAE6"}
 let s:palette.keyword         = {'normal': "#FF7733"}
 
@@ -42,8 +42,13 @@ let s:palette.punctuation     = {'normal': "#FFEE99"}
 " ----------------------------------------------------------------------------
 
 function! s:build_prim(hi_elem, field)
-  let l:vname = "s:" . a:hi_elem . "_" . a:field " s:bg_gray
-  let l:gui_assign = "gui".a:hi_elem."=".s:palette[a:field][s:style] " guibg=...
+  let l:new_style = s:style
+  if !has_key(s:palette[a:field], s:style)
+    let l:new_style = 'normal'
+  endif
+
+  let l:vname = "s:" . a:hi_elem . "_" . a:field
+  let l:gui_assign = "gui".a:hi_elem."=".s:palette[a:field][l:new_style]
   exe "let " . l:vname . " = ' " . l:gui_assign . "'"
 endfunction
 
@@ -91,7 +96,7 @@ exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLineNr"  .s:fg_accent      .s:bg_none        .s:fmt_none
 exe "hi! LineNr"        .s:fg_guide       .s:bg_none        .s:fmt_none
 exe "hi! @punctuation"  .s:fg_punctuation .s:bg_none        .s:fmt_none
-exe "hi! @tag"          .s:fg_punctuation .s:bg_none        .s:fmt_none
+exe "hi! @tag.delimiter" .s:fg_punctuation .s:bg_none        .s:fmt_none
 
 exe "hi! Directory"     .s:fg_fg_idle     .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_string      .s:bg_panel       .s:fmt_none
@@ -104,7 +109,7 @@ exe "hi! FoldColumn"    .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_none        .s:fmt_none
 "   Incsearch"
 
-exe "hi! MatchParen"    .s:fg_accent      .s:bg_none        .s:fmt_undr
+exe "hi! MatchParen"    .s:fg_accent      .s:bg_line        .s:fmt_undr
 exe "hi! ModeMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! NonText"       .s:fg_guide       .s:bg_none        .s:fmt_none
