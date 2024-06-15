@@ -5,7 +5,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let s:style = 'dark'
+let s:style = 'normal'
 let g:colors_name = "dayu"
 "}}}
 
@@ -13,27 +13,27 @@ let g:colors_name = "dayu"
 " ----------------------------------------------------------------------------
 
 let s:palette = {}
-let s:palette.bg              = {'dark': "#0F1419"}
-let s:palette.comment         = {'dark': "#5C6773"}
-let s:palette.markup          = {'dark': "#F07178"}
-let s:palette.constant        = {'dark': "#D2A6FF"}
-let s:palette.operator        = {'dark': "#FF7733"}
-let s:palette.tag             = {'dark': "#39BAE6"}
-let s:palette.regexp          = {'dark': "#95E6CB"}
-let s:palette.string          = {'dark': "#95FB79"}
-let s:palette.function        = {'dark': "#FCED65"}
-let s:palette.special         = {'dark': "#39BAE6"}
-let s:palette.keyword         = {'dark': "#FF7733"}
+let s:palette.bg              = {'normal': "#0F1419"}
+let s:palette.comment         = {'normal': "#5C6773"}
+let s:palette.markup          = {'normal': "#F07178"}
+let s:palette.constant        = {'normal': "#D2A6FF"}
+let s:palette.operator        = {'normal': "#FF7733"}
+let s:palette.tag             = {'normal': "#39BAE6"}
+let s:palette.regexp          = {'normal': "#95E6CB"}
+let s:palette.string          = {'normal': "#95FB79"}
+let s:palette.function        = {'normal': "#FCED65", 'soft': '#FFEE99'}
+let s:palette.special         = {'normal': "#39BAE6"}
+let s:palette.keyword         = {'normal': "#FF7733"}
 
-let s:palette.error           = {'dark': "#FF3333"}
-let s:palette.accent          = {'dark': "#F29718"}
-let s:palette.panel           = {'dark': "#14191F"}
-let s:palette.guide           = {'dark': "#2D3640"}
-let s:palette.line            = {'dark': "#25282e"}
-let s:palette.selection       = {'dark': "#3d424d"}
-let s:palette.fg              = {'dark': "#E6E1CF"}
-let s:palette.fg_idle         = {'dark': "#39BAE6"}
-let s:palette.punctuation     = {'dark': "#FFEE99"}
+let s:palette.error           = {'normal': "#FF3333"}
+let s:palette.accent          = {'normal': "#F29718"}
+let s:palette.panel           = {'normal': "#14191F"}
+let s:palette.guide           = {'normal': "#2D3640"}
+let s:palette.line            = {'normal': "#25282e"}
+let s:palette.selection       = {'normal': "#3d424d"}
+let s:palette.fg              = {'normal': "#E6E1CF"}
+let s:palette.fg_idle         = {'normal': "#39BAE6"}
+let s:palette.punctuation     = {'normal': "#FFEE99"}
 
 
 "}}}
@@ -91,6 +91,7 @@ exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLineNr"  .s:fg_accent      .s:bg_none        .s:fmt_none
 exe "hi! LineNr"        .s:fg_guide       .s:bg_none        .s:fmt_none
 exe "hi! @punctuation"  .s:fg_punctuation .s:bg_none        .s:fmt_none
+exe "hi! @tag"          .s:fg_punctuation .s:bg_none        .s:fmt_none
 
 exe "hi! Directory"     .s:fg_fg_idle     .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_string      .s:bg_panel       .s:fmt_none
