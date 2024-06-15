@@ -33,7 +33,7 @@ let s:palette.line            = {'normal': "#25282e"}
 let s:palette.selection       = {'normal': "#3d424d"}
 let s:palette.fg              = {'normal': "#E6E1CF"}
 let s:palette.fg_idle         = {'normal': "#39BAE6"}
-let s:palette.punctuation     = {'normal': "#FFEE99"}
+let s:palette.punctuation     = {'normal': "#FFEE99", 'soft': "#E6E1CF"}
 
 
 "}}}
@@ -96,7 +96,7 @@ exe "hi! CursorLine"    .s:fg_none        .s:bg_line        .s:fmt_none
 exe "hi! CursorLineNr"  .s:fg_accent      .s:bg_none        .s:fmt_none
 exe "hi! LineNr"        .s:fg_guide       .s:bg_none        .s:fmt_none
 exe "hi! @punctuation"  .s:fg_punctuation .s:bg_none        .s:fmt_none
-exe "hi! @tag.delimiter" .s:fg_fg         .s:bg_none        .s:fmt_none
+exe "hi! @tag.delimiter" .s:fg_punctuation .s:bg_none        .s:fmt_none
 
 exe "hi! Directory"     .s:fg_fg_idle     .s:bg_none        .s:fmt_none
 exe "hi! DiffAdd"       .s:fg_string      .s:bg_panel       .s:fmt_none
@@ -281,6 +281,6 @@ hi! link diffAdded String
 "
 " This is needed for some reason: {{{
 
-let &background = s:style
+let &background = 'normal'
 
 " }}}
