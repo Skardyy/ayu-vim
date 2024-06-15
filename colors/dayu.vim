@@ -109,7 +109,7 @@ exe "hi! FoldColumn"    .s:fg_none        .s:bg_none        .s:fmt_none
 exe "hi! SignColumn"    .s:fg_none        .s:bg_none        .s:fmt_none
 "   Incsearch"
 
-exe "hi! MatchParen"    .s:fg_accent      .s:bg_none        .s:fmt_undr
+exe "hi! MatchParen"    .s:fg_accent      .s:bg_none        .s:fmt_none
 exe "hi! ModeMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! MoreMsg"       .s:fg_string      .s:bg_none        .s:fmt_none
 exe "hi! NonText"       .s:fg_guide       .s:bg_none        .s:fmt_none
@@ -156,7 +156,7 @@ exe "hi! String"          .s:fg_string    .s:bg_none        .s:fmt_none
 exe "hi! Identifier"      .s:fg_fg       .s:bg_none        .s:fmt_none
 exe "hi! Function"        .s:fg_function .s:bg_none        .s:fmt_ital
 
-exe "hi! Statement"       .s:fg_keyword   .s:bg_none        .s:fmt_none
+exe "hi! Statement"       .s:fg_keyword  .s:bg_none        .s:fmt_ital
 "   Conditional"
 "   Repeat"
 "   Label"
